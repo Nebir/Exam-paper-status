@@ -1,0 +1,110 @@
+/*==================================
+        Global Styles
+===================================*/
+
+body {
+    color: #323232;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.42em;
+}
+
+/*----------------- Button style ------------------*/
+
+.btn-eps {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 6px 20px;
+    text-transform: capitalize;
+    word-break: break-all;
+}
+
+.btn-eps-no-br {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.btn-eps-default {
+    background-color: #0572c1;
+    border: 1px solid #0572c1;
+    color: #fff;
+}
+
+.btn-eps-default:hover {
+	background-color: transparent;
+	color: #0572c1;
+}
+
+.btn-eps-transparent {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.btn-eps-transparent:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-eps-small {
+    font-size: 14px;
+    padding: 6px 15px;
+}
+
+button:focus {
+    outline: none;
+}
+
+/*==================================
+        Welcome page
+===================================*/
+
+.welcome-page-header {
+    background-image: url(../img/home_bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+.welcome-page-header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+}
+
+.welcome-page-header .header-wrapper {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.header-wrapper .header-wrapper-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.welcome-page-header .page-title {
+    color: #fff;
+    margin-bottom: 15px;
+}
