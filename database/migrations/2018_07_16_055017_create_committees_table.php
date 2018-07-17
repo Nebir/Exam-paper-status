@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBatchesTable extends Migration
+class CreateCommitteesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class CreateBatchesTable extends Migration
      */
     public function up()
     {
-        Schema::create('batches', function (Blueprint $table) {
+        Schema::create('committees', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('curiculam_id');
-            $table->integer('students');
-            $table->string('department');
-            $table->string('session');
             $table->timestamps();
         });
     }
@@ -30,6 +26,6 @@ class CreateBatchesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('batches');
+        Schema::dropIfExists('committees');
     }
 }

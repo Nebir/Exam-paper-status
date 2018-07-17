@@ -17,7 +17,7 @@ php artisan key:generate
 # DataBase Migration
 php artisan migrate
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:8000
 php artisan serve
 
 ```
