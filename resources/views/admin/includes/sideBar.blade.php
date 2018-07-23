@@ -9,7 +9,7 @@
                 </a>
             </li>
 
-            <li>
+            {{--<li>
                 <a href="#">
                     <i class="fa fa-th"></i>
                     <span>Education &amp; Training</span>
@@ -105,7 +105,7 @@
                     <li class=""><a href="{{ route('create.country') }}"><i class="fa fa-circle-o"></i> Add Country </a></li>
                     <li class=""><a href="{{ route('create.region') }}"><i class="fa fa-circle-o"></i> Add Region </a></li>
                 </ul>
-            </li>
+            </li>--}}
         </ul>
     </section>
     <!-- /.sidebar -->
