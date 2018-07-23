@@ -18,10 +18,11 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('img');
+            $table->string('role')->default('user');
+            /*$table->string('img');
             $table->string('designation');
             $table->string('contact', 11);
-            $table->boolean('site_role');
+            $table->boolean('site_role');*/
             $table->rememberToken();
             $table->timestamps();
         });
