@@ -42,10 +42,14 @@ class LoginController extends Controller
           'password' => $request->password
         ])){
           $user = User::where('email',$request->email)->first();
+            /*if($user->role == 'Admin')
+                return redirect()->route('dashboard');
+            else
+                return redirect()->route('userProfile');*/
           // if($user->is_admin()){
           //     return redirect()->route('entryTransaction');
           // }
-          return redirect()->route('adminDashboard');
+          return redirect()->route('dashboard');
         }
         return redirect()->back();
       }

@@ -108,3 +108,21 @@ button:focus {
     color: #fff;
     margin-bottom: 15px;
 }
+
+
+/*=====================================
+            Dashboard
+=======================================*/
+
+.main-header .logo {
+    height: 66px;
+    line-height: 66px;
+}
+
+.main-sidebar, .left-side {
+    padding-top: 80px;
+}
+
+label {
+    font-weight: bold;
+}

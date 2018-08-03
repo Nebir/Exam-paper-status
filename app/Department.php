@@ -6,9 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Department extends Model
 {
-    protected $table='departments';
+    /*protected $table='departments';
 
     public function batch(){
         return $this->hasMany(Batch::class);
-    }
+    }*/
+
+    /*public function course(){
+        return $this->hasMany('App\Course');
+    }*/
 }
