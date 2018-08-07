@@ -44,9 +44,28 @@ Route::post('admin/new-course-type-entry','AdminController@addNewCourseType')->m
 Route::get('admin/new-department-entry',['as' => 'department.create', 'uses' => 'AdminController@addNewDepartmentForm'])->middleware('CheckAdmin:Admin');
 Route::post('admin/new-department-entry','AdminController@addNewDepartment')->middleware('CheckAdmin:Admin');
 
+//All Teacher related routes
 Route::get('admin/assign-course-teacher',['as' => 'assign.courseTeacher', 'uses' => 'AdminController@assignCourseTeacherForm'])->middleware('CheckAdmin:Admin');
 Route::post('admin/assign-course-teacher','AdminController@assignCourseTeacher')->middleware('CheckAdmin:Admin');
+Route::get('admin/update-course-teacher/{id}',['as' => 'update.courseTeacher', 'uses' => 'CourseTeacherController@update'])->middleware('CheckAdmin:Admin');
+Route::post('admin/update-course-teacher/{id}','CourseTeacherController@edit')->middleware('CheckAdmin:Admin');
+Route::get('admin/delete-course-teacher/{id}',['as' => 'delete.courseTeacher', 'uses' => 'CourseTeacherController@destroy'])->middleware('CheckAdmin:Admin');
 
+//All semester related routes
+Route::get('admin/semester-data',['as' => 'semester.data', 'uses' => 'AdminController@semesterData'])->middleware('CheckAdmin:Admin');
+Route::get('admin/new-semester-entry',['as' => 'semester.create', 'uses' => 'AdminController@addNewSemesterForm'])->middleware('CheckAdmin:Admin');
+Route::post('admin/new-semester-entry','AdminController@addNewSemester')->middleware('CheckAdmin:Admin');
+Route::get('admin/update-semester/{id}',['as' => 'semester.update', 'uses' => 'semesterController@update'])->middleware('CheckAdmin:Admin');
+Route::post('admin/update-semester/{id}', 'semesterController@edit')->middleware('CheckAdmin:Admin');
+Route::get('admin/delete-semester/{id}',['as' => 'semester.delete', 'uses' => 'semesterController@destroy'])->middleware('CheckAdmin:Admin');
+
+//All batch related routes
+Route::get('admin/batch-data',['as' => 'batch.data', 'uses' => 'AdminController@batchData'])->middleware('CheckAdmin:Admin');
+Route::get('admin/new-batch-entry',['as' => 'batch.create', 'uses' => 'AdminController@addNewBatchForm'])->middleware('CheckAdmin:Admin');
+Route::post('admin/new-batch-entry','AdminController@addNewBatch')->middleware('CheckAdmin:Admin');
+Route::get('admin/update-batch/{id}',['as' => 'batch.update', 'uses' => 'AdminController@update'])->middleware('CheckAdmin:Admin');
+Route::post('admin/update-batch/{id}','AdminController@edit')->middleware('CheckAdmin:Admin');
+Route::get('admin/delete-batch/{id}',['as' => 'batch.delete', 'uses' => 'AdminController@destroy'])->middleware('CheckAdmin:Admin');
 
 // Login Routes...
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');

@@ -17,8 +17,8 @@
                     <td>{{ $teacherData->email }}</td>
                     <td>
                         <div class="btn-group">
-                            <a href="#" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
+                            <a href="{{ route('update.courseTeacher', $teacherData->id) }}  class="btn btn-primary">Edit</a>
+                            <a href="{{route('delete.courseTeacher', $teacherData->id) }} class="btn btn-danger">Delete</a>
                         </div>
                     </td>
                 </tr>
